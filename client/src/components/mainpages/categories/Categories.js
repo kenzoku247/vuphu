@@ -4,7 +4,7 @@ import axios from 'axios'
 
 function Categories() {
     const state = useContext(GlobalState)
-    const [categories, setCategories] = state.categoriesAPI.categories
+    const [categories] = state.categoriesAPI.categories
     const [category, setCategory] = useState('')
     const [token] = state.token
     const [callback, setCallback] = state.categoriesAPI.callback
@@ -15,11 +15,9 @@ function Categories() {
         e.preventDefault()
         try {
             if(onEdit){
-                
                 const res = await axios.put(`/api/category/${id}`, {name: category}, {
                     headers: {Authorization: token}
                 })
-                // console.log(res)
                 alert(res.data.msg)
             }else{
                 const res = await axios.post('/api/category', {name: category}, {
@@ -58,7 +56,8 @@ function Categories() {
         <div className="categories">
             <form onSubmit={createCategory}>
                 <label htmlFor="category">Category</label>
-                <input type="text" name="category" value={category} required onChange={e => setCategory(e.target.value)}></input>
+                <input type="text" name="category" value={category} required
+                onChange={e => setCategory(e.target.value)} />
 
                 <button type="submit">{onEdit? "Update" : "Create"}</button>
             </form>
