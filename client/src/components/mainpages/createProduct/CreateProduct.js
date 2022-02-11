@@ -113,8 +113,6 @@ function CreateProduct() {
                     headers: {Authorization: token}
                 })
             }
-            // setImages(false)
-            // setProduct(initialState)
             setCallback(!callback)
             navigate("/")
         } catch (err) {

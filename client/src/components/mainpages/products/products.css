@@ -4,6 +4,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: center;
     margin: 20px 0;
+    /* background-color:rgb(3, 165, 206); */
 }
 
 /* ----------- Product Item ----------------- */
@@ -23,10 +24,11 @@
     text-transform: uppercase;
     color: rgb(3, 165, 206);
     letter-spacing: 1.3px;
+    
 }
 .delete-all button{
     border: 1px solid crimson;
-    padding: 10px 25px;
+    padding: 5px 25px;
     color: crimson;
     text-transform: uppercase;
 }
@@ -55,11 +57,44 @@
 
 /* -------------------- Load More --------------- */
 .load_more{
+    /* justify-content: space-between; */
     text-align: center;
 }
 .load_more button{
-    padding: 10px 25px;
+    padding: 0px  25px;
     margin-bottom: 20px;
-    border: 1px solid #555;
+    border: 2px solid #555;
     text-transform: capitalize;
+    border-radius: 30px;
+}
+.load_more :hover{
+    background-color: #eaeaf0;
+}
+
+.bg_im {
+    /* position: absolute; */
+    background-image: url(../../middles/background.jpg);
+    min-height: 670px;
+    min-width: 1192px;
+
+
+}
+
+.bg_im h1{
+    position: relative;
+    top: 250px;
+    text-align: center;
+    font-family: "Goudy Bookletter 1911", sans-serif;
+    font-size: 100px;
+    color:rgba(200, 255, 0, 0.849);
+    /* background-color:bisque; */
+    
+
+}
+
+.bg_im button{
+    align-items: center;
+    margin-top:250px;
+    margin-right: -300px;
+    
 }

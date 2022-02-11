@@ -11,6 +11,7 @@ import NotFound from './utils/not_found/NotFound'
 import Categories from './categories/Categories'
 import CreateProduct from './createProduct/CreateProduct'
 
+
 import {GlobalState} from '../../GlobalState'
 
 
@@ -21,6 +22,7 @@ function Pages() {
 
 
     return (
+        
         <Routes>
             <Route path="/" exact element={<Products/>} />
             <Route path="/detail/:id" exact element={<DetailProduct/>} />

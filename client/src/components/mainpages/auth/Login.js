@@ -28,7 +28,7 @@ function Login() {
            
             <form onSubmit={loginSubmit}>
                 <h2>Login</h2>
-                <input type="email" name="email" required
+                <input type="email" name="email" required autoComplete="on"
                 
                 placeholder="Email" value={user.email} onChange={onChangeInput} />
 

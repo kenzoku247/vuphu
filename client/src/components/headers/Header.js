@@ -48,9 +48,9 @@ function Header() {
                 <img src={Menu} alt="" width="30" />
             </div>
 
-            <div className="logo">
+            <div className="logo" >
                 <h1>
-                    <Link to="/">{isAdmin ? 'Admin' : 'Smile Store'}</Link>
+                    <Link to="/" style={{color: '#2407',fontFamily: 'Montserrat'}}>{isAdmin ? 'Admin' : 'Smile Store'}</Link>
                 </h1>
             </div>
             
@@ -79,9 +79,12 @@ function Header() {
                     </Link>
                 </div>
             }
-            
+
         </header>
+        
     )
 }
+
+
 
 export default Header

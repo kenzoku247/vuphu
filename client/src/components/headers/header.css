@@ -5,16 +5,22 @@ header{
     display: flex; /* Giúp các phần tử nằm linh hoạt */ 
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items:center;
     border-bottom: 1px solid #ddd;
+    place-items: 100px;
 }
+
 
 header .logo{
     flex: 1;
 }
 header a{
+    top:-100px;
+    /* margin-bottom: 10px; */
     text-transform: uppercase;
-    color: #555;
+    color: rgb(78, 78, 83);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }
 header ul li{
     display: inline-block;
