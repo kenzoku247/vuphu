@@ -5,6 +5,7 @@ import {GlobalState} from '../../../../GlobalState'
 function BtnRender({product, deleteProduct}) {
     const state = useContext(GlobalState)
     const [isAdmin] = state.userAPI.isAdmin
+    const [isLogged] = state.userAPI.isLogged
     const addCart = state.userAPI.addCart
 
     
@@ -22,9 +23,17 @@ function BtnRender({product, deleteProduct}) {
                     </Link> 
                 </>
                 : <>
+                {
+                    !isLogged ?
+                    <>
+                    <Link id="btn_buy" to="/login"> Buy</Link>
+                    </>
+                    : <>
                     <Link id="btn_buy" to="#!" onClick={() => addCart(product)}>
                         Buy
                     </Link>
+                    </>
+                }
                     <Link id="btn_view" to={`/detail/${product._id}`}>
                         View
                     </Link>

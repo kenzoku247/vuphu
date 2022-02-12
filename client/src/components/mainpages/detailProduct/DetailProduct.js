@@ -10,6 +10,7 @@ function DetailProduct() {
     const [products] = state.productsAPI.products
     const addCart = state.userAPI.addCart
     const [detailProduct, setDetailProduct] = useState([])
+    const [isLogged] = state.userAPI.isLogged
 
     useEffect(() =>{
         if(params.id){
@@ -35,10 +36,18 @@ function DetailProduct() {
                     <p>{detailProduct.description}</p>
                     <p>{detailProduct.content}</p>
                     <p>Sold: {detailProduct.sold}</p>
+                    {
+                    !isLogged ?
+                    <>
+                    <Link to="/login" className='cart'>Buy Now</Link>
+                    </>
+                    : <>
                     <Link to="/cart" className="cart"
                         onClick={() => addCart(detailProduct)}>
                         Buy Now
                     </Link>
+                    </>
+                    }
                 </div>
             </div>
 

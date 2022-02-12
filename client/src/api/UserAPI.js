@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 function UserAPI(token) {
     const [isLogged, setIsLogged] = useState(false)
@@ -35,7 +36,11 @@ function UserAPI(token) {
     
 
     const addCart = async (product) => {
-        if(!isLogged) return alert("Please login to continue buying")
+        if(!isLogged) 
+        return (
+            alert("Please login to continue buying")
+            // <Link to="/login"></Link>
+            )
 
         const check = cart.every(item =>{
             return item._id !== product._id

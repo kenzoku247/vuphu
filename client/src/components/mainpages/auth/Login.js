@@ -36,8 +36,10 @@ function Login() {
                 placeholder="Password" value={user.password} onChange={onChangeInput}/>
 
                 <div className="row">
-                    <button type="submit">Login</button>
-                    <Link to="/register">Register</Link>
+                    <button type="submit">Log In</button>
+                </div>
+                <div className='register'>
+                <Link to="/register">Create New Account</Link>
                 </div>
             </form>
         </div>
